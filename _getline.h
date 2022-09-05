@@ -17,20 +17,20 @@
 #endif
 
 /**
- *  * struct fd - holds an open file descriptor buffer
- *   * @fd: the integer file descriptor
- *    * @buf: pointer to the char buffer
- *     * @i: current index in the buf
- *      * @len: current length of the buf
- *       * @next: next node in linked list
- *        */
+ * struct fd - holds an open file descriptor buffer
+ * @fd: the integer file descriptor
+ * @buf: pointer to the char buffer
+ * @i: current index in the buf
+ * @len: current length of the buf
+ * @next: next node in linked list
+ */
 typedef struct fd
 {
-		int fd;
-			char *buf;
-				size_t i;
-					size_t len;
-						struct fd *next;
+	int fd;
+	char *buf;
+	size_t i;
+	size_t len;
+	struct fd *next;
 } FdBuf;
 
 #define READ_SIZE 1024
